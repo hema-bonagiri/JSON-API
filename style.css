@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container{
+     background-color: rgb(176, 240, 240);
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Tinos", serif;
+  font-weight: 700;
+    font-size: larger;
+    height: 120vh;
+}
+.location-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+h1{
+    
+    font-weight: 900;
+    font-size: 55px;
+    color: rgb(189, 107, 107);
+}
+p{
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+
+img{
+    width:500px;
+    border-radius: 10px;    
+}
+img:hover{
+    border-radius: 10px;
+    border-color: antiquewhite solid 10px;
+}
+button{
+    margin-top: -120px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: chocolate;
+    border-radius: 25px;
+    border-color: rgb(30, 132, 221);
+}

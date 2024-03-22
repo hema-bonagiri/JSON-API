@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="location-container" id="locContainer">
+
+
+        </div>
+        <button onclick="fetchPlace()">New Location</button>
+    </div>
+    <script>
+        async function fetchPlace() {
+
+            const locationContainer = document.getElementById('locContainer');
+            locationContainer.innerHTML = '';
+            const response = await fetch('https://api.npoint.io/7bbd3a59c401f616bb89');
+            const data = await response.json();
+
+            const randomIndex = Math.floor(Math.random() * data.places.length);
+
+            const placeHtml = `
+            <h1>${ data.places[randomIndex].name}</h1>
+            <p>${data.places[randomIndex].info}</p>
+             <img src = "${data.places[randomIndex].image}">      
+            `;
+            locationContainer.innerHTML = placeHtml;
+        }
+        fetchPlace();
+    </script>
+</body>
+
+</html>
